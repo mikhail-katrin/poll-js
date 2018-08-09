@@ -1,2 +1,7 @@
+# dependencies
+/node_modules
+
 # idea
 .idea/
+
+yarn.lock
