@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/mikhail-katrin/poll-js"
   },
+  "keywords": ["js polling", "poll js", "polljs", "poll promise", "promise polling", "async polling"],
   "scripts": {
     "babel-version": "./node_modules/.bin/babel --version",
     "lint": "./node_modules/.bin/eslint src/*.js",
