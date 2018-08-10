@@ -6,9 +6,9 @@
   "author": "Mikhail Katrin <katrinmikhail@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "babel-version": "babel --version",
+    "babel-version": "./node_modules/.bin/babel --version",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "build": "babel --presets babel-preset-env -d lib/ src/",
+    "build": "./node_modules/.bin/babel --presets babel-preset-env -d lib/ src/",
     "prepublish": "yarn build"
   },
   "devDependencies": {

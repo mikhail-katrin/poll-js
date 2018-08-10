@@ -1,13 +1,12 @@
 language: node_js
 node_js:
-- '10'
-- '9'
+  - '10'
 
 sudo: false
 
 script:
-- yarn install
-- yarn lint
+  - yarn install
+  - yarn lint
 
 deploy:
   provider: npm
@@ -17,3 +16,4 @@ deploy:
   on:
     branch: master
     repo: mikhail-katrin/poll-js
+  skip_cleanup: true
