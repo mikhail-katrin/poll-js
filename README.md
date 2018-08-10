@@ -1,1 +1,1 @@
-# poll-js [![Build Status](https://travis-ci.org/mikhail-katrin/poll-js.svg?branch=master)](https://travis-ci.org/mikhail-katrin/poll-js)
+# poll-js [![Build Status](https://travis-ci.org/mikhail-katrin/poll-js.svg?branch=master)](https://travis-ci.org/mikhail-katrin/poll-js) [![npm version](https://badge.fury.io/js/poll-js.svg)](https://badge.fury.io/js/poll-js)
