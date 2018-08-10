@@ -1,10 +1,19 @@
 language: node_js
 node_js:
-  - '10'
-  - '9'
+- '10'
+- '9'
 
 sudo: false
 
 script:
-  - yarn install
-  - yarn lint
+- yarn install
+- yarn lint
+
+deploy:
+  provider: npm
+  email: katrinmikhail@gmail.com
+  api_key:
+    secure: Dx5yIyTbVeJgJKLb8AwyjtXaO5yDw9g4nFLqXD97V27buRFqPVDNH/DoPnAiG4nVpv0IFv0J77HIjN7YeUOP2ptQDEanrGh2CnKTBTSsFusoOqtDeUN4Bt65LKQrDA33ojrOBMplj9o3q2+proZQ1iNsr6eGwYmdW6/HZQQvhSOT7JFRj/8ezUzZ48ZlSmcUHVbWOtmyAZBQv29hgQpwL0aljYHNocfhws4vJtigfvjzl2pLD+U8CYX431vrbLhKtBDgWF/Y2AVJFV/w5ojGkArnzxglN13NjPSXbON3m4a8O765SyhmpSPyF7a6HW+sXQ26TE1hQ4ElDbHTa2EFpX3fgHZD0G6fBTIFy4GnLFxn3C0+sPnWZvoc34gz0anSB+BBJb1bXcT7SYTpMeOb0PeR/AixoOa+om3Db0QhHXHBlj34ZoHg3H6/iqEg23x3Py97eA/y7kXmrrCc768KrXULI5NSsEGOzyQKR9XOeP2G8gdaxIOvX2cVf3zhHV9JdS/cI0eWo6a65DR/weZhVCI4iTCkOmYemytOpVemzxdxegFqD3vYfKySTqmAiPbw0Zse83gzNtT1pDbDlQ+SvxQS394LBA0V+puxKrce38D9HZK0ypYh+k2gaU5d5ny/oLJ+uF/9Dth9yWtBIVOXV7ZS5XGfJ89OFro4Y4xkdwQ=
+  on:
+    branch: master
+    repo: mikhail-katrin/poll-js

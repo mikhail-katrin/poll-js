@@ -1,8 +1,19 @@
 {
+  "name": "poll-js",
+  "version": "0.0.0",
+  "description": "Wrap async requests and make them repeatable",
+  "main": "./lib/index.js",
+  "author": "Mikhail Katrin <katrinmikhail@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "babel-version": "babel --version",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "build": "babel --presets babel-preset-env -d lib/ src/",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.3.0"
   }
 }
