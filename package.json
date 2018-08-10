@@ -1,6 +1,6 @@
 {
   "name": "poll-js",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Wrap async requests and make them repeatable",
   "main": "./lib/index.js",
   "author": "Mikhail Katrin <katrinmikhail@gmail.com>",
@@ -9,7 +9,14 @@
     "type": "git",
     "url": "https://github.com/mikhail-katrin/poll-js"
   },
-  "keywords": ["js polling", "poll js", "polljs", "poll promise", "promise polling", "async polling"],
+  "keywords": [
+    "js polling",
+    "poll js",
+    "polljs",
+    "poll promise",
+    "promise polling",
+    "async polling"
+  ],
   "scripts": {
     "babel-version": "./node_modules/.bin/babel --version",
     "lint": "./node_modules/.bin/eslint src/*.js",
