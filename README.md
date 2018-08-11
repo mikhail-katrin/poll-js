@@ -12,10 +12,10 @@ Using yarn: ```yarn add poll-js```
 ```$xslt  
 import { pollWrapper } from 'poll-js';
 
-const { future, cancel } = pollWrapper({
+const { future, cancel, retries } = pollWrapper({
   request: fetch('github.com'),
-  pollingPeriod: 1000 // ms,
-  shouldStop: response => response.status === 200 
+  pollingPeriod: 1000,
+  shouldStop: response => response.status === 200
 });
 
 future
@@ -26,16 +26,16 @@ future
 cancel();  
 ```
 
-
 ## API
 
-#### .pollWrapper({request, pollingPeriod, shouldStop})
+#### .pollWrapper({request, pollingPeriod, shouldStop, attempts})
 
-Returns `Promise` and `cancel` function. `cancel` allows manually terminate polling.
+Returns `Promise`, `cancel` function and `retries` number. `cancel` allows manually terminate polling.
 
-##### `request` - Function that returns `Promise` 
-##### `pollingPeriod` - Time in ms after `request` rejection and new attempt to perform it
+##### `request` - Function that returns `Promise` .
+##### `pollingPeriod` - Time in ms after `request` rejection and new attempt to execute `request`.
 ##### `shouldStop` - Function which determines a condition for polling termination.
+##### `attempts` - [Optional] Integer positive number which bounds total number of retries. `null` by default.
 
 
 
