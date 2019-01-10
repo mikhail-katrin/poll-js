@@ -13,7 +13,7 @@ Using yarn: ```yarn add poll-js```
 import { pollWrapper } from 'poll-js';
 
 const { future, cancel } = pollWrapper({
-  request: fetch('github.com'),
+  request: () => fetch('github.com'),
   pollingPeriod: 1000 // ms,
   shouldStop: response => response.status === 200 
 });
