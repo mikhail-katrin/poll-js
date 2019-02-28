@@ -41,4 +41,4 @@ Returns `Promise` and `cancel` function. `cancel` allows manually terminate poll
 
 ## License
 
-MIT © 2018 Mikhail Katrin mikhailkatrin@gmail.com
+MIT © 2019 Mikhail Katrin katrinmikhail@gmail.com
