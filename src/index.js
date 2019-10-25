@@ -1,7 +1,8 @@
-
-export const pollWrapper = ({request, pollingPeriod, shouldStop}) => {
+export const pollWrapper = ({ request, pollingPeriod, shouldStop }) => {
   let canceled = false;
-  const cancel = () => { canceled = true; };
+  const cancel = () => {
+    canceled = true;
+  };
 
   const poll = (resolve, reject) => {
     if (canceled) {
