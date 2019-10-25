@@ -17,10 +17,11 @@
     "promise polling",
     "async polling"
   ],
+  "types": "src/types.d.ts",
   "scripts": {
     "babel-version": "./node_modules/.bin/babel --version",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "build": "./node_modules/.bin/babel --presets @babel/preset-env -d lib/ src/ --ignore __tests__",
+    "build": "./node_modules/.bin/babel --presets @babel/preset-env -d lib/ src/ --ignore src/__tests__",
     "prepublish": "yarn build",
     "test": "jest"
   },
