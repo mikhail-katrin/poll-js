@@ -17,20 +17,24 @@
     "promise polling",
     "async polling"
   ],
+  "type": "module",
   "types": "src/types.d.ts",
   "scripts": {
-    "babel-version": "./node_modules/.bin/babel --version",
-    "lint": "./node_modules/.bin/eslint src/*.js",
-    "build": "./node_modules/.bin/babel --presets @babel/preset-env -d lib/ src/ --ignore src/__tests__",
+    "lint": "./node_modules/.bin/tslint src/**/*.ts",
+    "build": "tsc",
     "prepublish": "yarn build",
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/preset-env": "^7.6.3",
-    "eslint": "^6.0.1",
-    "jest": "^24.9.0"
+    "@types/jest": "^24.0.21",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    }
   }
 }

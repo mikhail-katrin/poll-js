@@ -4,5 +4,5 @@
 # idea
 .idea/
 
-#lib
-lib/
+#dist
+dist/

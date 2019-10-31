@@ -1,4 +1,4 @@
-import pollWrapper from "../index";
+import pollWrapper from '../index';
 
 beforeAll(() => {
   jest.useFakeTimers();
@@ -6,22 +6,19 @@ beforeAll(() => {
 
 describe('polling', () => {
   test('should be defined', () => {
-    jest.useFakeTimers();
     const { future, cancel } = pollWrapper({
-      request: () => {},
+      request: () => Promise.resolve(),
       pollingPeriod: 1000,
-      shouldStop: () => {}
+      shouldStop: () => false
     });
 
     expect(future).toBeDefined();
     expect(cancel).toBeDefined();
   });
 
-  test('should be stopped', () => {
+  test('should be stopped', async () => {
     const { future } = pollWrapper({
-      request: () => {
-        return Promise.resolve('done');
-      },
+      request: () => Promise.resolve('done'),
       pollingPeriod: 1000,
       shouldStop: response => response === 'done'
     });

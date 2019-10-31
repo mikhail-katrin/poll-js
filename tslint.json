@@ -1,0 +1,19 @@
+{
+  "defaultSeverity": "error",
+  "jsRules": {},
+  "rules": {
+    "prefer-const": true,
+    "object-literal-shorthand": true,
+    "no-duplicate-imports": true,
+    "one-variable-per-declaration": true,
+    "semicolon": [true, "always"],
+    "no-empty-interface": true,
+    "curly": true,
+    "no-async-without-await": true,
+    "no-debugger": true,
+    "no-duplicate-variable": true,
+    "no-var-keyword": true,
+    "triple-equals": true
+  },
+  "rulesDirectory": []
+}
