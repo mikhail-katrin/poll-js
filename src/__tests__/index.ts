@@ -16,7 +16,7 @@ describe('polling', () => {
     expect(cancel).toBeDefined();
   });
 
-  test('should be stopped', async () => {
+  test('should be resolved', async () => {
     const { future } = pollWrapper({
       request: () => Promise.resolve('done'),
       pollingPeriod: 1000,
